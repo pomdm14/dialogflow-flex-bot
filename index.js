@@ -1,4 +1,3 @@
-console.log("Intent:", intent);
 console.log("Body:", JSON.stringify(req.body, null, 2));
 const express = require('express');
 const bodyParser = require('body-parser');
