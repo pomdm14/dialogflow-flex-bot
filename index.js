@@ -1,4 +1,3 @@
-console.log("Body:", JSON.stringify(req.body, null, 2));
 const express = require('express');
 const bodyParser = require('body-parser');
 
@@ -7,6 +6,8 @@ app.use(bodyParser.json());
 
 app.post('/webhook', (req, res) => {
   const intent = req.body.queryResult.intent.displayName;
+  console.log("Intent:", intent);
+  console.log("Body:", JSON.stringify(req.body, null, 2));
 
   if (intent === 'show_flex_room') {
     const flexMessage = {
